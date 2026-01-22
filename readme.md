@@ -10,15 +10,17 @@ go get github.com/yuta1031/go-multipassify
 ```go
 import multipassify "github.com/yuta1031/go-multipassify"
 
-	m, err := multipassify.New(SHOPIFY_MULTIPASS_SECRET, jst)
+
+    // specify your location or pass nil to use the local location
+	m, err := multipassify.New("[SHOPIFY_MULTIPASS_SECRET]", nil)
 	if err != nil {
 		panic(err)
 	}
 	customerInfo := map[string]any{
-		"email": customer.Email,
+		"email": "test@example.com",
 	}
 
-	url, err := m.GenerateUrl(customerInfo, SHOPIFY_DOMAIN)sify.
+	url, err := m.GenerateUrl(customerInfo, "[SHOPIFY_DOMAIN]")sify.
 
     // Generates a URL like:  https://yourstorename.myshopify.com/account/login/multipass/<MULTIPASS-TOKEN>
 ```
