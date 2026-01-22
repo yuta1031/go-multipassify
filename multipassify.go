@@ -23,7 +23,7 @@ type Multipassify struct {
 }
 
 // creates a new Multipassify instance with the given secret
-func NewMultipassify(secret string, location *time.Location) (*Multipassify, error) {
+func New(secret string, location *time.Location) (*Multipassify, error) {
 	if secret == "" {
 		return nil, fmt.Errorf("invalid secret: secret must not be empty")
 	}
