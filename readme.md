@@ -1,12 +1,12 @@
-### go-multipassify
+## go-multipassify
 Shopify Multipass module for Go
 
-#### Installation
+### Installation
 ```
 go get github.com/yuta1031/go-multipassify
 ```
 
-#### Usage
+### Usage
 ```go
 import multipassify "github.com/yuta1031/go-multipassify"
 
